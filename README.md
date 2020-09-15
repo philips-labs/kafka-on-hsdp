@@ -14,7 +14,7 @@ on Cloud foundry
 
 | Name | Version |
 |------|---------|
-| cloudfoundry | 0.12.4 |
+| cloudfoundry | >= 0.12.4 |
 
 ## Inputs
 
@@ -32,9 +32,11 @@ on Cloud foundry
 | cf\_space | Cloud foundry space to provision Kafdrop in | `string` | n/a | yes |
 | cf\_username | Cloud foundry username | `string` | n/a | yes |
 | kafka\_instance\_type | The EC2 instance type to use for Kafka nodes | `string` | `"t3.large"` | no |
+| kafka\_nodes | Number of Kafka nodes to spin up | `number` | `1` | no |
 | name\_postfix | Optional postfix to append in routes | `string` | `""` | no |
 | private\_key\_file | SSH private key. Used to access SSH bastion host | `string` | n/a | yes |
 | zookeeper\_instance\_type | The EC2 instance type to use for Zookeeper servers | `string` | `"t2.medium"` | no |
+| zookeeper\_nodes | Number of Zookeeper nodes to spin up | `number` | `1` | no |
 
 ## Outputs
 

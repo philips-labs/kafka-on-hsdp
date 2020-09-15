@@ -80,3 +80,15 @@ variable "kafka_instance_type" {
   description = "The EC2 instance type to use for Kafka nodes"
   default     = "t3.large"
 }
+
+variable "kafka_nodes" {
+  type        = number
+  description = "Number of Kafka nodes to spin up"
+  default     = 1
+}
+
+variable "zookeeper_nodes" {
+  type        = number
+  description = "Number of Zookeeper nodes to spin up"
+  default     = 1
+}
