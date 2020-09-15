@@ -7,7 +7,7 @@ on Cloud foundry
 
 | Name | Version |
 |------|---------|
-| cloudfoundry | 0.12.4 |
+| cloudfoundry | >= 0.12.4 |
 | hsdp | >= 0.6.1 |
 
 ## Providers
