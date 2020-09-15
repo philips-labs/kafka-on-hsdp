@@ -1,4 +1,4 @@
-# CH Kafka + HSDP Cloud foundry apps
+# Kafka on HSDP
 This Terraform root module demonstrates usage of a Kafka Cluster provisioned 
 Container Host. We also spin up a Kafdrop instance as an example app hosted
 on Cloud foundry
