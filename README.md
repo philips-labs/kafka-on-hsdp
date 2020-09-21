@@ -3,6 +3,8 @@ This Terraform root module demonstrates usage of a Kafka Cluster provisioned
 Container Host. We also spin up a Kafdrop instance as an example app hosted
 on Cloud foundry
 
+>**NOTE**: authentication/authorization is not enabled on provisioned clusters so you will have to configure this yourself for the time being.
+
 ## Requirements
 
 | Name | Version |
