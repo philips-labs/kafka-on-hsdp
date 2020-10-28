@@ -15,11 +15,15 @@ resource "cloudfoundry_app" "kafdrop" {
   space        = data.cloudfoundry_space.space.id
   memory       = 1024
   disk_quota   = 2048
-  docker_image = "obsidiandynamics/kafdrop"
+  docker_image = "skprasad/kafdrop"
   environment = {
-    KAFKA_BROKERCONNECT = "${element(module.kafka.kafka_nodes, 0)}:${module.kafka.kafka_port}"
-    SERVER_PORT         = "8080"
-  }
+    KAFKA_BROKERCONNECT = "${element(module.kafka.kafka_nodes, 0)}:${module.kafka.kafka_port}",
+    SERVER_PORT         = "8080",
+    KAFKA_TRUSTSTORE = "${filebase64("${var.kafka_trust_store_file}")}",
+    KAFKA_PROPERTIES = "${filebase64("${var.kafka_properties_file}")}",
+    KAFKA_KEYSTORE = "${filebase64("${var.kafdrop_key_store_file}")}",
+    KAFKA_SECURITYPROTOCOL  = "SSL"
+    }
   routes {
     route = cloudfoundry_route.kafdrop.id
   }
