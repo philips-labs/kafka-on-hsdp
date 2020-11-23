@@ -9,14 +9,14 @@ on Cloud foundry
 
 | Name | Version |
 |------|---------|
-| cloudfoundry | >= 0.12.4 |
-| hsdp | >= 0.6.1 |
+| cloudfoundry | >= 0.1206.0 |
+| hsdp | >= 0.7.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| cloudfoundry | >= 0.12.4 |
+| cloudfoundry | >= 0.1206.0 |
 
 ## Inputs
 
