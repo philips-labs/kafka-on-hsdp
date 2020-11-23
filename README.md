@@ -54,7 +54,8 @@ No output.
 ## key generation
 Look at the (https://github.com/bitnami/bitnami-docker-kafka) for how to. there is a (https://raw.githubusercontent.com/confluentinc/confluent-platform-security-tools/master/kafka-generate-ssl.sh) which provides the necessary results.
 
-##example kafka.properties file for kafdrop and possilby your clients
+## example kafka.properties file for kafdrop and possilby your clients
+    
     kafka.securityprotocol=SSL
     ssl.security.protocol=SSL
     ssl.endpoint.identification.algorithm=
