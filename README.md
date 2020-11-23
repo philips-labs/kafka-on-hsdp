@@ -3,7 +3,7 @@ This Terraform root module demonstrates usage of a Kafka Cluster provisioned
 Container Host. We also spin up a Kafdrop instance as an example app hosted
 on Cloud foundry
 
->**NOTE**: authentication/authorization is not enabled on provisioned clusters so you will have to configure this yourself for the time being.
+>**NOTE**: authentication/authorization is mTLS-SSL. you will need to create you own certificates.
 
 ## Requirements
 
@@ -39,10 +39,30 @@ on Cloud foundry
 | private\_key\_file | SSH private key. Used to access SSH bastion host | `string` | n/a | yes |
 | zookeeper\_instance\_type | The EC2 instance type to use for Zookeeper servers | `string` | `"t2.medium"` | no |
 | zookeeper\_nodes | Number of Zookeeper nodes to spin up | `number` | `1` | no |
+| zoo\_trust\_store\_file | zookeeper trust store JKS format path | `string` | none | yes |
+| kafka\_trust\_store\_file | kafka trust store JKS format path | `string` | none | yes |
+| zoo\_key\_store\_file | zookeeper key store JKS format path | `string` | none | yes |
+| kafka\_key\_store\_file | kafka key store JKS format path | `string` | none | yes |
+| kafdrop\_key\_store\_file | kafdrop key store JKS format path | `string` | none | yes |
+| kafka\_properties\_file | kafka properties file for kafdrop | `string` | none | yes |
+| ssl\_pass | a single password that works with all key stores and all trust stores (yes this is an example) | `string` | none | yes |
 
 ## Outputs
 
 No output.
+
+## key generation
+Look at the (https://github.com/bitnami/bitnami-docker-kafka) for how to. there is a (https://raw.githubusercontent.com/confluentinc/confluent-platform-security-tools/master/kafka-generate-ssl.sh) which provides the necessary results.
+
+##example kafka.properties file for kafdrop and possilby your clients
+    kafka.securityprotocol=SSL
+    ssl.security.protocol=SSL
+    ssl.endpoint.identification.algorithm=
+    ssl.truststore.password=<yourpass>
+    ssl.truststore.type=JKS
+    ssl.keystore.password=<yourpass>
+    ssl.keystore.type=JKS
+    ssl.key.password=<yourpass>
 
 # Contact / Getting help
 
