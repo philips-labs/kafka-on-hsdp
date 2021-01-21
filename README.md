@@ -67,7 +67,7 @@ Look at the (https://github.com/bitnami/bitnami-docker-kafka) for how to. there 
 
 # Contact / Getting help
 
-andy.lo-a-foe@philips.com
+Post your question on the HSDP Slack `#terraform` channel
 
 # License
 
