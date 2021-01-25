@@ -16,6 +16,5 @@ provider "hsdp" {
   cartel_secret = var.cartel_secret
   cartel_host   = var.cartel_host
 
-  debug     = true
-  debug_log = "/tmp/vh.log"
+  debug_log = "/tmp/kafka.log"
 }
