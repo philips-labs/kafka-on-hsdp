@@ -95,38 +95,38 @@ variable "zookeeper_nodes" {
 
 
 variable "zoo_trust_store_file" {
-  type = string
+  type        = string
   description = "file path of the zookeeper trust store"
 }
 
 variable "kafka_trust_store_file" {
-  type = string
+  type        = string
   description = "file path of the kafka trust store"
 }
 
 variable "zoo_key_store_file" {
-  type = string
+  type        = string
   description = "file path of the zookeeper key store"
 }
 
 variable "kafka_key_store_file" {
-  type = string
+  type        = string
   description = "file path of the kafka key store"
 }
 
 variable "kafka_properties_file" {
-  type = string
+  type        = string
   description = "file path of the kafka properties file"
 }
 
 variable "kafdrop_key_store_file" {
-  type = string
+  type        = string
   description = "file path of the kafkadrop key store"
 }
 
 
 variable "ssl_pass" {
-  type = string
+  type        = string
   description = "one pass for all of the keys and stores"
 }
 
