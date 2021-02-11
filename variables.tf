@@ -9,7 +9,6 @@ variable "cf_password" {
 }
 
 variable "cf_api" {
-  default     = "https://api.eu1.phsdp.com"
   type        = string
   description = "Cloud foundry API endpoint (region specific)"
 }
@@ -32,7 +31,6 @@ variable "cf_region" {
 
 variable "cf_domain" {
   type        = string
-  default     = "eu-west.philips-healthsuite.com"
   description = "Default Cloud foundry domain to use for apps"
 }
 
@@ -56,7 +54,6 @@ variable "bastion_host" {
 variable "cartel_host" {
   type        = string
   description = "Cartel API host (region specific)"
-  default     = "cartel-eu1.cloud.phsdp.com"
 }
 
 variable "cartel_token" {
