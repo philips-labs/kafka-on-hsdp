@@ -1,6 +1,6 @@
 module "zookeeper" {
   source = "philips-labs/zookeeper/hsdp"
-  version = "0.7.1"
+  version = "0.8.0"
 
   bastion_host  = var.bastion_host
   nodes         = var.zookeeper_nodes
@@ -21,7 +21,7 @@ module "zookeeper" {
 
 module "kafka" {
   source = "philips-labs/kafka/hsdp"
-  version = "0.7.1"
+  version = "0.8.0"
 
   bastion_host      = var.bastion_host
   nodes             = var.kafka_nodes

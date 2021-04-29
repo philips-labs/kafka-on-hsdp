@@ -1,15 +1,15 @@
 terraform {
   required_providers {
     cloudfoundry = {
-      source  = "philips-labs/cloudfoundry"
-      version = ">= 0.1300.2"
+      source  = "cloudfoundry-community/cloudfoundry"
+      version = ">= 0.14.1"
     }
     random = {
       source = "random"
     }
     hsdp = {
       source  = "philips-software/hsdp"
-      version = ">= 0.9.1"
+      version = ">= 0.14.8"
     }
   }
 }
