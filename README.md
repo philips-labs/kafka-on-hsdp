@@ -6,7 +6,7 @@ on Cloud foundry
 >**NOTE**: authentication/authorization is mTLS-SSL. you will need to create you own certificates.
 
 ## Prerquisites
-- You must be onboarded to the HSDP Container Host service (i.e. have Cartel API credentials)
+- You must be onboarded to the [HSDP Container Host service](https://www.hsdp.io/documentation/container-host) (i.e. have Cartel API credentials)
 - Terraform
 
 ## Requirements
