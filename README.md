@@ -1,6 +1,6 @@
 # Kafka on HSDP
 This Terraform root module demonstrates usage of a Kafka Cluster provisioned 
-Container Host. We also spin up a Kafdrop instance as an example app hosted
+on Container Host. We also spin up a Kafdrop instance as an example app hosted
 on Cloud foundry
 
 >**NOTE**: authentication/authorization is mTLS-SSL. you will need to create you own certificates.
